@@ -1,0 +1,78 @@
+/* CSS for custom card widget */
+.majestic-elite-card-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 10px; /* Small space between cards */
+}
+
+.majestic-elite-card-list .cards {
+  flex: 1; /* Allow cards to fill the available space */
+  max-width: calc(33.33% - 10px); /* 33.33% width for each card with a small gap */
+  background-color: #f9f9f9; /* Default background color for cards */
+  padding: 20px;
+  transition: background-color 0.3s, transform 0.3s; /* Transition for background color and scale */
+  box-sizing: border-box; /* Include padding and border in the max-width calculation */
+  height: auto; /* Allow the card height to adjust based on content */
+  margin: 10px; /* Default margin between cards */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  display: flex; /* Use flexbox for card content alignment */
+  flex-direction: column; /* Stack card content vertically */
+  justify-content: space-between; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.majestic-elite-card-list .cards:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+  transform: scale(1.05); /* Scale up on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Transition for background color and scale */
+}
+
+.majestic-elite-card-list img {
+  width: 100%; /* Image width 100% of the card */
+  height: auto; /* Maintain image aspect ratio */
+  max-width: 100%; /* Limit image width to the card width */
+  max-height: 100%; /* Allow the image height to adjust based on the image itself */
+}
+
+/* Optional: Set maximum height for the image */
+.majestic-elite-card-list img.card-image {
+  max-height: 100%; /* Adjust this value based on your needs */
+}
+
+.majestic-elite-card-list h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center; /* Center-align the title */
+}
+
+.majestic-elite-card-list p {
+  margin: 0;
+}
+
+.majestic-elite-card-list .sub-description {
+  font-style: italic;
+  color: #888;
+  margin-top: 5px;
+  text-align: center; /* Center-align the sub-description */
+}
+
+.majestic-elite-card-list .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  text-align: center; /* Center-align the button */
+}
+
+.majestic-elite-card-list .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Add this to your CSS for custom card widget */
+.majestic-elite-card-list .cards.card-scale {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}

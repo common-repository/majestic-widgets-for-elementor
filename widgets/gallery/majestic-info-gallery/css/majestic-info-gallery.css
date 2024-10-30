@@ -1,0 +1,190 @@
+.majestic-info-gallery *, .majestic-info-gallery *:before, .majestic-info-gallery *:after {
+  box-sizing: border-box;
+}
+
+ * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform-style: preserve-3d;
+}
+
+.majestic-info-gallery *:focus {
+  outline: none !important;
+}
+
+.majestic-info-gallery body, .majestic-info-gallery html {
+  height: 100%;
+}
+
+.majestic-info-gallery body {
+  height: 100%;
+  font-family: faune, fantasy;
+}
+
+.majestic-info-gallery .photo-grid {
+  position: relative;
+  font-style: italic;
+}
+.majestic-info-gallery .photo-grid ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+}
+.majestic-info-gallery .photo-grid ul li {
+  width: 100%;
+  /* overflow: hidden; */
+}
+.majestic-info-gallery .photo-grid figure, .photo-grid picture, .photo-grid img {
+  display: block;
+  max-width: 100%;
+  min-height: 348px;
+  height: 100%;
+  width:100%;
+}
+.majestic-info-gallery .photo-grid figure {
+  position: relative;
+}
+.majestic-info-gallery .photo-grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.majestic-info-gallery .photo-grid fieldset {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+}
+.majestic-info-gallery .photo-grid .photo-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.majestic-info-gallery .photo-grid label, .photo-grid .photo-link {
+  cursor: pointer;
+}
+.majestic-info-gallery .photo-grid .photo-link {
+  will-change: opacity;
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 3px;
+}
+.majestic-info-gallery .photo-grid .icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+.majestic-info-gallery .photo-grid .icon group, .photo-grid .icon path, .photo-grid .icon polyline, .photo-grid .icon polygon, .photo-grid .icon circle, .photo-grid .icon ellipse, .photo-grid .icon rect {
+  fill: none;
+  fill-rule: evenodd;
+  stroke: white;
+  stroke-width: 7px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.majestic-info-gallery .photo-grid input {
+  display: none;
+}
+.majestic-info-gallery .photo-grid input ~ label.photo-link {
+  display: none;
+}
+.majestic-info-gallery .photo-grid input:checked ~ dl {
+  transform: none;
+  opacity: 1;
+  z-index: 2;
+}
+.majestic-info-gallery .photo-grid input:checked ~ .photo-close {
+  z-index: unset;
+}
+.majestic-info-gallery .photo-grid input:checked ~ label.photo-link {
+  opacity: 0;
+}
+
+.majestic-info-gallery .grid-isotope li {
+  padding: 10px;
+}
+.majestic-info-gallery .photo-grid dl {
+  transform: translateY(25%);
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.3s ease-out;
+  will-change: opacity, transform;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(17, 23, 26, 0.9);
+}
+.majestic-info-gallery .photo-grid dl label, .majestic-info-gallery .photo-grid dl .photo-link {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  padding: 6px;
+}
+.majestic-info-gallery .photo-grid dl label {
+  top: 0;
+}
+.majestic-info-gallery .photo-grid dl .photo-link {
+  bottom: 0;
+}
+.majestic-info-gallery .photo-grid dl div {
+  position: relative;
+  z-index: 0;
+}
+.majestic-info-gallery .photo-grid dl dt, .photo-grid dl dd {
+  display: inline;
+}
+.majestic-info-gallery .photo-grid dl dt {
+  opacity: 0.7;
+  font-weight: bold;
+}
+.majestic-info-gallery .photo-grid dl dt:after {
+  content: ": ";
+}
+
+@supports (-webkit-backdrop-filter: blur(10px)) {
+  .majestic-info-gallery .photo-grid dl {
+    background-color: rgba(17, 23, 26, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+}
+@media only screen and (min-width: 600px) {
+  .majestic-info-gallery .photo-grid input ~ label.photo-link {
+    opacity: 0;
+  }
+  .majestic-info-gallery .photo-grid li:hover input ~ label.photo-link {
+    opacity: 1;
+  }
+  .majestic-info-gallery .photo-grid li:hover input:checked ~ label.photo-link {
+    opacity: 0;
+  }
+  .majestic-info-gallery .photo-grid input ~ label.photo-link {
+    display: block;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .majestic-info-gallery .photo-grid ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .majestic-info-gallery .photo-grid ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 3000px) {
+  .majestic-info-gallery .photo-grid ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

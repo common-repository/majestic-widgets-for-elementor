@@ -1,0 +1,208 @@
+.majestic-modern-card-list body {
+  font-family: "Oxygen", sans-serif;
+  color: #050505;
+}
+
+.majestic-modern-card-list *,
+.majestic-modern-card-list *::before,
+.majestic-modern-card-list *::after {
+  box-sizing: border-box;
+}
+
+.majestic-modern-card-list .main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.majestic-modern-card-list .cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.majestic-modern-card-list .cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.majestic-modern-card-list .card_image {
+  position: relative;
+  max-height: 250px;
+}
+
+.majestic-modern-card-list .card_image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.majestic-modern-card-list .card_price {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 45px;
+  border-radius: 0.25rem;
+  background-color: #c89b3f;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.majestic-modern-card-list .card_price span {
+  font-size: 12px;
+  margin-top: -2px;
+}
+
+.majestic-modern-card-list .note {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  border-radius: 0.25rem;
+  background-color: #c89b3f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (min-width: 40rem) {
+  .majestic-modern-card-list .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .majestic-modern-card-list .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.majestic-modern-card-list .card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.majestic-modern-card-list .card_content {
+  position: relative;
+  padding: 16px 12px 32px 24px;
+  margin: 16px 8px 8px 0;
+  max-height: 290px;
+  overflow-y: scroll;
+}
+
+.majestic-modern-card-list .card_content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.majestic-modern-card-list .card_content::-webkit-scrollbar-track {
+  box-shadow: 0;
+  border-radius: 0;
+}
+
+.majestic-modern-card-list .card_content::-webkit-scrollbar-thumb {
+  background: #c89b3f;
+  border-radius: 15px;
+}
+
+.majestic-modern-card-list .card_title {
+  position: relative;
+  margin: 0 0 24px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.majestic-modern-card-list .card_title::after {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c89b3f;
+  content: "";
+}
+
+.majestic-modern-card-list hr {
+  margin: 24px auto;
+  width: 50px;
+  border-top: 2px solid #c89b3f;
+}
+
+.majestic-modern-card-list .card_text p {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.majestic-modern-card-list .card_text p:last-child {
+  margin: 0;
+}
+
+.majestic-modern-card-list button {
+  width: 100%;
+}
+
+
+
+/* Default styles for card_price */
+.majestic-modern-card-list .card_price {
+  position: absolute;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+/* Styles for different positions */
+.majestic-modern-card-list .card_price.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.majestic-modern-card-list .card_price.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.majestic-modern-card-list .card_price.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.majestic-modern-card-list .card_price.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+
+/* .majestic-modern-card-list .highlight-on-hover .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} */
+
+
+.majestic-modern-card-list .cards_item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.majestic-modern-card-list .highlight-on-hover .card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.majestic-modern-card-list .highlight-on-hover .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}

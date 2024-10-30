@@ -1,0 +1,50 @@
+/* Add your CSS styles for the Smart Card Widget here */
+.smart-card-widget-container {
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+margin-top:6%;
+}
+
+.smart-card {
+  /* border: 1px solid #ddd; */
+  padding-bottom: 20px;
+  margin-top: 15px;
+  width: calc(33.33% - 20px); /* Adjust based on cards per row and margins */
+  box-sizing: border-box;
+  /* Add styling for individual cards here */
+}
+
+
+
+.smart-card-widget-container .smart-card .full-width {
+  width: 100%;
+  height: auto;
+}
+.smart-card-widget-container .smart-card .card-heading{
+margin-top: 10px;
+}
+.smart-card-widget-container .smart-card .card-heading.text-center {
+  text-align: center;
+}
+
+/* Center the description text */
+.smart-card-widget-container .smart-card .card-description.text-center {
+margin-top: 10px;
+}
+
+.smart-card-widget-container .smart-card .card-description {
+  text-align: center;
+}
+
+.smart-card-widget-container .smart-card .card-sub-description{
+text-align: center;
+}
+
+.smart-card-widget-container .smart-card.with-padding {
+  padding: 20px; /* Adjust the padding value as needed */
+}
+
+.smart-card-widget-container .smart-card.with-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add your shadow styles here */
+}

@@ -1,0 +1,58 @@
+/* Add your CSS styles here */
+.majestic-creative-card-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  margin: -10px;
+}
+
+.majestic-creative-card-list .creative-card {
+  box-sizing: border-box;
+  width: calc(50% - 20px);
+  padding: 10px;
+  display: flex;
+  background-color: #f9f9f9;
+  margin: 10px;
+}
+
+.majestic-creative-card-list .creative-card  .card-image{
+  min-width: 50%;
+  width: 50%;
+}
+.majestic-creative-card-list .card-content {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.majestic-creative-card-list .card-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.majestic-creative-card-list .card-content h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.majestic-creative-card-list .sub-description {
+  font-size: 16px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.majestic-creative-card-list .btn {
+  margin-top: auto; /* Push the button to the bottom */
+  text-align: center;
+  text-decoration: none;
+  background-color: #0073e6;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.majestic-creative-card-list .btn:hover {
+  background-color: #005bbf;
+}

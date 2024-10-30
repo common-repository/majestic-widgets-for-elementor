@@ -1,0 +1,57 @@
+.majestic-social-scale body {
+  background: #147896;
+}
+
+.majestic-social-scale .button-block {
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  flex-flow: wrap;
+  /* margin: 200px auto; */
+}
+
+.majestic-social-scale .social {
+  display: inline-block;
+  margin: 40px;
+  cursor: pointer;
+}
+.majestic-social-scale .social a {
+  display: block;
+  background: black;
+  padding: 0.75rem;
+  position: relative;
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+.majestic-social-scale .social a::before {
+  dislpay: block;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  left: -20px;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  transform: rotate(0deg) skewY(-45deg);
+}
+.majestic-social-scale .social a::after {
+  dislpay: block;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  transform: rotate(0deg) skewX(-45deg);
+  background: rgba(0, 0, 0, 0.7);
+  transform: rotate(45deg) scewY(-45deg);
+}
+.majestic-social-scale .social a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
+}
+.majestic-social-scale .social a i {
+  color: white;
+  font-size: 1.5rem;
+}
